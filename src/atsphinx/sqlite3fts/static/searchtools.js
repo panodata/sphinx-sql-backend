@@ -14,15 +14,20 @@ class SearchEngine {
     this.script = document.createElement("script");
     this.script.src = `${this.SQLITE_BASE}/sql-wasm.js`;
     this.script.addEventListener("load", () => this.onLoadSQLjs());
+    this.contentRoot = (
+      document.getElementById("documentation_options")
+        ? document.getElementById("documentation_options").getAttribute('data-url_root')
+        : document.documentElement.dataset.content_root
+    );
     document.body.appendChild(this.script);
     this.renderSearchRunning();
   }
 
   async onLoadSQLjs() {
     const sqlPromise = initSqlJs({
-      locateFile: file => `${ this.SQLITE_BASE }/${file}`,
+      locateFile: file => `${this.SQLITE_BASE}/${file}`,
     });
-    const dataPromise = fetch(`${DOCUMENTATION_OPTIONS.URL_ROOT}db.sqlite`).then(res => res.arrayBuffer());
+    const dataPromise = fetch(`${this.contentRoot}db.sqlite`).then(res => res.arrayBuffer());
     const [SQL, buf] = await Promise.all([sqlPromise, dataPromise]);
     this.db = new SQL.Database(new Uint8Array(buf));
     this.isReady = true;
@@ -42,7 +47,7 @@ class SearchEngine {
       query,
       documents: {},
     };
-    while( stmt.step() ) {
+    while (stmt.step()) {
       const rslt = stmt.getAsObject();
       if (!result.documents[rslt.page]) {
         result.documents[rslt.page] = {
@@ -90,7 +95,7 @@ class SearchEngine {
     Object.values(result.documents).forEach(doc => {
       const elm = document.createElement("li");
       const root = doc.root || doc.sections[0];
-      const url = new URL(`${DOCUMENTATION_OPTIONS.URL_ROOT}${root.page}`, location);
+      const url = new URL(`${this.contentRoot}${root.page}`, location);
       url.searchParams.set("highlight", result.query.split()[0]);
       elm.innerHTML = `<a href="${url.href}">${root.doc}</a>`;
       searchResults.querySelector("ul.search-list").appendChild(elm);
@@ -119,8 +124,8 @@ const Search = {
     }
   },
 
-  loadIndex() {},
-  setIndex() {},
+  loadIndex() { },
+  setIndex() { },
 }
 
 addEventListener("DOMContentLoaded", () => {

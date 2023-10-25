@@ -1,13 +1,13 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2022, Kazuya Takei
-# This file is distributed under the same license as the sphinx-sqlite3fts
+# This file is distributed under the same license as the atsphinx-sqlite3fts
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: sphinx-sqlite3fts \n"
+"Project-Id-Version: atsphinx-sqlite3fts \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-27 22:53+0900\n"
 "PO-Revision-Date: 2022-11-28 00:40+0900\n"
@@ -75,7 +75,7 @@ msgid "Use custom search page."
 msgstr "データベースを利用した検索ページを使用します。"
 
 #: ../../configuration.rst:25
-msgid "If you set ``True`` for this, ``sphinx-sqlite3fts`` does these."
+msgid "If you set ``True`` for this, ``atsphinx-sqlite3fts`` does these."
 msgstr "もしこの値が ``True`` の場合、ビルド時に次の機能を提供します。"
 
 #: ../../configuration.rst:27

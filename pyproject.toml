@@ -3,7 +3,7 @@ requires = ["flit_core >=3.2,<4"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "sphinx-sqlite3fts"
+name = "atsphinx-sqlite3fts"
 authors = [{name = "Kazuya Takei", email = "myself@attakei.net"}]
 readme = "README.rst"
 license = {file = "LICENSE"}
@@ -51,15 +51,15 @@ test = [
 ]
 
 [project.scripts]
-sphinx-sqlite3fts = "sphinx_sqlite3fts.cli:main"
+atsphinx-sqlite3fts = "atsphinx.sqlite3fts.cli:main"
 
 [project.urls]
-Home = "https://attakei-lab.github.io/sphinx-sqlite3fts"
-Repository = "https://github.com/attakei-lab/sphinx-sqlite3fts"
-Documentation = "https://sphinx-sqlite3fts.readthedocs.io/"
+Home = "https://atsphinx.github.io/sqlite3fts"
+Repository = "https://github.com/atsphinx/sqlite3fts"
+Documentation = "https://atsphinx-sqlite3fts.readthedocs.io/"
 
 [tool.flit.module]
-name = "sphinx_sqlite3fts"
+name = "atsphinx.sqlite3fts"
 
 [tool.flit.sdist]
 exclude = [

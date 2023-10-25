@@ -3,18 +3,18 @@
 #
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
-import sphinx_sqlite3fts
+import atsphinx.sqlite3fts
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
-project = "sphinx-sqlite3fts"
+project = "atsphinx-sqlite3fts"
 copyright = "2022, Kazuya Takei"
 author = "Kazuya Takei"
-release = sphinx_sqlite3fts.__version__
+release = atsphinx.sqlite3fts.__version__
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
-extensions = ["sphinx.ext.githubpages", "sphinx.ext.intersphinx", "sphinx_sqlite3fts"]
+extensions = ["sphinx.ext.githubpages", "sphinx.ext.intersphinx", "atsphinx.sqlite3fts"]
 templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 language = "en"
@@ -30,7 +30,7 @@ html_static_path = ["_static"]
 intersphinx_mapping = {
     "sphinx": ("https://www.sphinx-doc.org/en/master", None),
 }
-# sphinx-sqlite3fts
+# atsphinx-sqlite3fts
 sqlite3fts_use_search_html = True
 
 

@@ -1,18 +1,18 @@
-=================
-sphinx-sqlite3fts
-=================
+===================
+atsphinx-sqlite3fts
+===================
 
-Sphinx new search page using SQL.js and SQLite database included FTS extension.
+Power search for Sphinx by SQLite3-FTS extension.
 
-.. image:: https://img.shields.io/pypi/v/sphinx-sqlite3fts.svg
-    :target: https://pypi.org/project/sphinx-sqlite3fts/
+.. image:: https://img.shields.io/pypi/v/atsphinx-sqlite3fts.svg
+    :target: https://pypi.org/project/atsphinx-sqlite3fts/
 
-.. image:: https://github.com/attakei-lab/sphinx-sqlite3fts/actions/workflows/main.yml/badge.svg?branch=main
+.. image:: https://github.com/atsphinx/sqlite3fts/actions/workflows/main.yml/badge.svg?branch=main
    :alt: Run CI
-   :target: https://github.com/attakei-lab/sphinx-sqlite3fts/actions/workflows/main.yml
+   :target: https://github.com/atsphinx/sqlite3fts/actions/workflows/main.yml
 
-.. image:: https://readthedocs.org/projects/sphinx-sqlite3fts/badge/?version=latest
-    :target: https://sphinx-sqlite3fts.readthedocs.io/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/atsphinx-sqlite3fts/badge/?version=latest
+    :target: https://atsphinx-sqlite3fts.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
 
 .. note:: This is experimental library
@@ -33,11 +33,9 @@ This will be useful when you want to embed strong full-text search with keeping 
 Installation
 ============
 
-This is not published on PyPI.
-
 .. code-block:: console
 
-   pip install git+https://github.com/attakei-lab/sphinx-sqlite3fts.git
+   pip install atsphinx-sqlite3fts
 
 Usage
 =====
@@ -50,7 +48,7 @@ Usage
        #
        # Other extensions
        #
-       "sphinx_sqlite3fts",  # Add it
+       "atsphinx.sqlite3fts",  # Add it
    ]
 
 2. Run builder (html-based builder only).

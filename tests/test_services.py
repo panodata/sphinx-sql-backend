@@ -5,7 +5,7 @@ import pytest
 from sphinx.testing.restructuredtext import parse
 from sphinx.testing.util import SphinxTestApp
 
-from sphinx_sqlite3fts import models, services
+from atsphinx.sqlite3fts import models, services
 
 RST_DIR = Path(__file__).parent / "rst"
 

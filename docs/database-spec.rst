@@ -10,7 +10,7 @@ Base
 Using SQLite and FTS5 extension.
 Details are described in `SQLite website <https://www.sqlite.org/fts5.html>`_.
 
-``sphinx-sqlite3fts`` run these strategy.
+``atsphinx-sqlite3fts`` run these strategy.
 
 * Use ``trigram`` tokenizer to search Japanese text (not work with ``unicode61``).
 * Split document table and searching virtual table (document has ``page`` that is not target of search).
@@ -18,7 +18,7 @@ Details are described in `SQLite website <https://www.sqlite.org/fts5.html>`_.
 Tables
 ======
 
-``sphinx-sqlite3fts`` use peewee to manage database schemas.
+``atsphinx-sqlite3fts`` use peewee to manage database schemas.
 
 document table
 --------------

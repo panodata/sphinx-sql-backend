@@ -1,20 +1,20 @@
-=================
-sphinx-sqlite3fts
-=================
+===================
+atsphinx-sqlite3fts
+===================
 
 =============== ============================================================================================================
-PyPI            .. image:: https://img.shields.io/pypi/v/sphinx-sqlite3fts.svg
-                   :target: https://pypi.org/project/sphinx-sqlite3fts/
+PyPI            .. image:: https://img.shields.io/pypi/v/atsphinx-sqlite3fts.svg
+                   :target: https://pypi.org/project/atsphinx-sqlite3fts/
                    :alt: Published stable
-GitHub Actions  .. image:: https://github.com/attakei-lab/sphinx-sqlite3fts/actions/workflows/main.yml/badge.svg?branch=main
-                   :target: https://github.com/attakei-lab/sphinx-sqlite3fts/actions/workflows/main.yml
+GitHub Actions  .. image:: https://github.com/atsphinx/sqlite3fts/actions/workflows/main.yml/badge.svg?branch=main
+                   :target: https://github.com/atsphinx/sqlite3fts/actions/workflows/main.yml
                    :alt: Run CI Status
-Read the Docs   .. image:: https://readthedocs.org/projects/sphinx-sqlite3fts/badge/?version=latest
-                   :target: https://sphinx-sqlite3fts.readthedocs.io/en/latest/?badge=latest
+Read the Docs   .. image:: https://readthedocs.org/projects/atsphinx-sqlite3fts/badge/?version=latest
+                   :target: https://atsphinx-sqlite3fts.readthedocs.io/en/latest/?badge=latest
                    :alt: Documentation Status
 =============== ============================================================================================================
 
-``sphinx-sqlite3fts`` is sphinx extension to provide some components.
+``atsphinx-sqlite3fts`` is sphinx extension to provide some components.
 
 * Full-text search database by FTS5
 * Custom HTML to search by user

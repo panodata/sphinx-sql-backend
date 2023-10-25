@@ -1,6 +1,6 @@
 """Configuration is cases for default behavior."""
 extensions = [
-    "sphinx_sqlite3fts",
+    "atsphinx.sqlite3fts",
 ]
 
 # To skip toctree

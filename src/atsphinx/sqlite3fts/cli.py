@@ -6,7 +6,7 @@ try:
     import click
 except ImportError:
     sys.stderr.write("CLI command need Click.\n")
-    sys.stderr.write("Please install by `pip install 'sphinx-sqlite3fts[cli]'`.\n")
+    sys.stderr.write("Please install by `pip install 'atsphinx-sqlite3fts[cli]'`.\n")
     sys.exit(1)
 
 from . import models

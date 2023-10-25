@@ -1,22 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2022, Kazuya Takei
-# This file is distributed under the same license as the sphinx-sqlite3fts
+# This file is distributed under the same license as the atsphinx-sqlite3fts
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: sphinx-sqlite3fts \n"
+"Project-Id-Version: atsphinx-sqlite3fts \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-27 22:53+0900\n"
+"POT-Creation-Date: 2023-10-25 23:42+0900\n"
 "PO-Revision-Date: 2022-11-28 00:40+0900\n"
 "Last-Translator: Kazuya Takei <myself@attakei.net>\n"
 "Language-Team: Kazuya Takei <myself@attakei.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.13.1\n"
 
 #: ../../database-spec.rst:3
 msgid "Database specification"
@@ -34,12 +34,13 @@ msgstr "基本"
 msgid ""
 "Using SQLite and FTS5 extension. Details are described in `SQLite website"
 " <https://www.sqlite.org/fts5.html>`_."
-msgstr "SQLiteのFTS5拡張を使用しています。詳細については"
-"`SQLiteのサイト <https://www.sqlite.org/fts5.html>`_ を参照して下さい。"
+msgstr ""
+"SQLiteのFTS5拡張を使用しています。詳細については`SQLiteのサイト "
+"<https://www.sqlite.org/fts5.html>`_ を参照して下さい。"
 
 #: ../../database-spec.rst:13
-msgid "``sphinx-sqlite3fts`` run these strategy."
-msgstr "``sphinx-sqlite3fts`` は次の考え方で利用しています。"
+msgid "``atsphinx-sqlite3fts`` run these strategy."
+msgstr "``atsphinx-sqlite3fts`` は次の考え方で利用しています。"
 
 #: ../../database-spec.rst:15
 msgid ""
@@ -51,16 +52,15 @@ msgstr "日本語ドキュメントの検索を前提としており、 ``trigra
 msgid ""
 "Split document table and searching virtual table (document has ``page`` "
 "that is not target of search)."
-msgstr "ドキュメントの基本情報とコンテンツ情報を分割してテーブル管理する。"
-"（ドキュメントにはページ名の情報があるが、これは検索対象にする必要がないため）"
+msgstr "ドキュメントの基本情報とコンテンツ情報を分割してテーブル管理する。（ドキュメントにはページ名の情報があるが、これは検索対象にする必要がないため）"
 
 #: ../../database-spec.rst:19
 msgid "Tables"
 msgstr "テーブル校正"
 
 #: ../../database-spec.rst:21
-msgid "``sphinx-sqlite3fts`` use peewee to manage database schemas."
-msgstr "``sphinx-sqlite3fts`` はデータベースのスキーマ管理にpeeweeを採用しています。"
+msgid "``atsphinx-sqlite3fts`` use peewee to manage database schemas."
+msgstr "``atsphinx-sqlite3fts`` はデータベースのスキーマ管理にpeeweeを採用しています。"
 
 #: ../../database-spec.rst:24
 msgid "document table"

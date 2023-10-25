@@ -18,13 +18,13 @@ This is published on PyPI.
 
 .. code-block:: console
 
-   pip install sphinx-sqlite3fts
+   pip install atsphinx-sqlite3fts
 
 If you want to try latest source, install from GitHub.
 
 .. code-block:: console
 
-   pip install git+https://github.com/attakei-lab/sphinx-sqlite3fts.git
+   pip install git+https://github.com/atsphinx/sqlite3fts.git
 
 Usage
 =====
@@ -34,7 +34,7 @@ At first, configuration on ``conf.py`` of your documentation.
 .. code-block:: python
 
    extensions = [
-       "sphinx_sqlite3fts",
+       "atsphinx.sqlite3fts",
    ]
 
    # Set if you want to use for HTML search

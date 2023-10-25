@@ -2,10 +2,23 @@
 Latest changes
 ==============
 
+v0.1.3
+======
+
+:date: 2023-10-26
+
+(Not featured release)
+
+Misc
+----
+
+* Fix to upload into GitHub Releases.
+* Fix release-date of v0.1.2
+
 v0.1.2
 ======
 
-:date: 2023-11-26
+:date: 2023-10-26
 
 Important
 ---------

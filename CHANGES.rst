@@ -2,6 +2,21 @@
 Latest changes
 ==============
 
+v0.1.2
+======
+
+:date: 2023-11-26
+
+Important
+---------
+
+* Rename from ``sphinx-sqlite3fts``
+
+Fixes
+-----
+
+* Ref content-root when using Sphinx>=7.2
+
 v0.1.1
 ======
 

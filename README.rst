@@ -74,7 +74,7 @@ Usage
 
 .. code-block:: console
 
-   python -m http.server -d build
+   python -m http.server -d _build/html
 
   Please access http://localhost:8000/search.html
 

@@ -1,41 +1,54 @@
-===================
-atsphinx-sqlite3fts
-===================
+==================
+sphinx-sql-backend
+==================
 
-Power search for Sphinx by SQLite3-FTS extension.
+SQL backend for the Sphinx documentation generator.
 
-.. image:: https://img.shields.io/pypi/v/atsphinx-sqlite3fts.svg
-    :target: https://pypi.org/project/atsphinx-sqlite3fts/
+.. image:: https://img.shields.io/pypi/v/sphinx-sql-backend.svg
+    :target: https://pypi.org/project/sphinx-sql-backend/
 
-.. image:: https://github.com/atsphinx/sqlite3fts/actions/workflows/main.yml/badge.svg?branch=main
+.. image:: https://github.com/panodata/sphinx-sql-backend/actions/workflows/main.yml/badge.svg?branch=main
    :alt: Run CI
-   :target: https://github.com/atsphinx/sqlite3fts/actions/workflows/main.yml
+   :target: https://github.com/panodata/sphinx-sql-backend/actions/workflows/main.yml
 
-.. image:: https://readthedocs.org/projects/atsphinx-sqlite3fts/badge/?version=latest
-    :target: https://atsphinx-sqlite3fts.readthedocs.io/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/sphinx-sql-backend/badge/?version=latest
+    :target: https://sphinx-sql-backend.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
 
-.. note:: This is experimental library
+What's inside
+=============
 
-Overview
-========
+A Sphinx extension to provide Full-Text-Search (FTS) based on SQL
+databases.
 
-This is sphinx extension to provide search component with full-text search database.
+The package is completely based on `atsphinx-sqlite3fts`_ by
+`Kazuya Takei`_, so many kudos and thanks go out to him.
+See also `sqlite3fts on GitHub`_.
 
-When ``sphinx-build`` runs with this extension, builder generate these components.
+Status
+======
 
-* SQLite database with FTS extension
-* Records of all documents
-* Search page HTML with sql.js
+Please note that the ``sphinx-sql-backend`` package contains alpha-, beta- and
+incubation-quality code, and as such, is considered to be a work in progress.
+Contributions of all kinds are much welcome, in order to make it more solid,
+and to add features.
 
-This will be useful when you want to embed strong full-text search with keeping static-site structure.
+Breaking changes should be expected until a 1.0 release, so version pinning is
+strongly recommended, especially when you use it as a library.
+
+How it works
+============
+
+* Indexing: When running ``sphinx-build``, store documents into database.
+* Searching: Provide backend service for responding to search requests and
+  search-as-you-type UI based on `readthedocs-sphinx-search`_.
 
 Installation
 ============
 
 .. code-block:: console
 
-   pip install atsphinx-sqlite3fts
+   pip install git+https://github.com/panodata/sphinx-sql-backend.git
 
 Usage
 =====
@@ -64,3 +77,9 @@ Usage
    python -m http.server -d build
 
   Please access http://localhost:8000/search.html
+
+
+.. _atsphinx-sqlite3fts: https://pypi.org/project/atsphinx-sqlite3fts/
+.. _Kazuya Takei: https://github.com/attakei
+.. _readthedocs-sphinx-search: https://github.com/readthedocs/readthedocs-sphinx-search
+.. _sqlite3fts on GitHub: https://github.com/atsphinx/sqlite3fts

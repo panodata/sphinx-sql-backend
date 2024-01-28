@@ -1,4 +1,11 @@
-"""Management database schema."""
+"""
+Database schema / ORM entity definition.
+
+- atsphinx-sqlite3fts is using SQLite.
+- sphinx-sql-backend is aiming to add support for others.
+
+TODO: Add support for multiple database backends?
+"""
 from pathlib import Path
 from typing import Iterable
 

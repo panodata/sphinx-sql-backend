@@ -10,7 +10,7 @@ from atsphinx.sqlite3fts import models, services
 RST_DIR = Path(__file__).parent / "rst"
 
 
-@pytest.mark.sphinx("sqlite", testroot="default")
+@pytest.mark.sphinx("fts-index", testroot="default")
 def test_single_section(app: SphinxTestApp):  # noqa
     rst_path = RST_DIR / "single-section.rst"
     doctree = parse(app, rst_path.read_text())
@@ -24,7 +24,7 @@ def test_single_section(app: SphinxTestApp):  # noqa
     assert sections[0].root
 
 
-@pytest.mark.sphinx("sqlite", testroot="default")
+@pytest.mark.sphinx("fts-index", testroot="default")
 def test_sub_sections(app: SphinxTestApp):  # noqa
     rst_path = RST_DIR / "sub-sections.rst"
     doctree = parse(app, rst_path.read_text())
@@ -35,7 +35,7 @@ def test_sub_sections(app: SphinxTestApp):  # noqa
     assert not sections[1].root
 
 
-@pytest.mark.sphinx("sqlite", testroot="default")
+@pytest.mark.sphinx("fts-index", testroot="default")
 def test_multiple_sub_sections(app: SphinxTestApp):  # noqa
     rst_path = RST_DIR / "multiple-sub-sections.rst"
     doctree = parse(app, rst_path.read_text())

@@ -35,6 +35,7 @@ dynamic = ["version", "description"]
 dependencies = [
   "docutils",
   "peewee",
+  "psycopg2[binary]",
   "sphinx<7",
 ]
 

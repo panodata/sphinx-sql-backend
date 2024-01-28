@@ -5,6 +5,11 @@ on:
   pull_request:
   workflow_dispatch:
 
+# Cancel in-progress jobs when pushing to the same branch.
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.ref }}
+
 jobs:
   lint:
     runs-on: ubuntu-latest

@@ -2,6 +2,12 @@
 Latest changes
 ==============
 
+unreleased
+==========
+
+- Friendly fork to divert into adding SQL backends for other databases
+
+
 v0.1.3
 ======
 

@@ -18,13 +18,13 @@ This is published on PyPI.
 
 .. code-block:: console
 
-   pip install atsphinx-sqlite3fts
+   pip install sphinx-sql-backend
 
 If you want to try latest source, install from GitHub.
 
 .. code-block:: console
 
-   pip install git+https://github.com/atsphinx/sqlite3fts.git
+   pip install git+https://github.com/panodata/sphinx-sql-backend.git
 
 Usage
 =====

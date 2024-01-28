@@ -35,7 +35,7 @@ dynamic = ["version", "description"]
 dependencies = [
   "docutils",
   "peewee",
-  "Sphinx",
+  "sphinx<7",
 ]
 
 [project.optional-dependencies]

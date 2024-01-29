@@ -1,9 +1,16 @@
-name: Run CI
+name: Tests
 
 on:
+  pull_request: ~
   push:
-  pull_request:
+    branches: [ main ]
+
+  # Allow job to be triggered manually.
   workflow_dispatch:
+
+  # Run job each night.
+  schedule:
+    - cron: '0 3 * * *'
 
 # Cancel in-progress jobs when pushing to the same branch.
 concurrency:
@@ -30,6 +37,13 @@ jobs:
       max-parallel: 4
       matrix:
         python-version: [3.7, 3.8, 3.9, '3.10', '3.11']
+    services:
+      postgresql:
+        image: postgres:16
+        ports:
+          - 5432:5432
+        env:
+          POSTGRES_HOST_AUTH_METHOD: trust
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python ${{ matrix.python-version }}
@@ -59,6 +73,13 @@ jobs:
           ls -l dist
   documentation:
     runs-on: ubuntu-latest
+    services:
+      postgresql:
+        image: postgres:16
+        ports:
+          - 5432:5432
+        env:
+          POSTGRES_HOST_AUTH_METHOD: trust
     steps:
       - uses: actions/checkout@v3
       - name: Setup python

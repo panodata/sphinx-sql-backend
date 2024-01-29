@@ -74,9 +74,31 @@ Usage
 
 .. code-block:: console
 
-   python -m http.server -d build
+   python -m http.server -d _build/html
 
   Please access http://localhost:8000/search.html
+
+
+Development
+===========
+
+Install package in development mode::
+
+    pip install --editable='.[cli,docs,test]' --prefer-binary
+
+Start PostgreSQL server::
+
+    docker run --rm -it --publish=5432:5432 --env "POSTGRES_HOST_AUTH_METHOD=trust" postgres:16 postgres -c log_statement=all
+
+Invoke software tests::
+
+    export POSTGRES_LOG_STATEMENT=all
+    pytest -vvv
+
+Invoke linters::
+
+    pip install pre-commit
+    pre-commit run --all-files
 
 
 .. _atsphinx-sqlite3fts: https://pypi.org/project/atsphinx-sqlite3fts/

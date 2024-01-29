@@ -7,13 +7,14 @@ from sphinx.util.docutils import nodes
 from . import models, services
 
 
-class SqliteBuilder(Builder):
-    """Single database generation builder.
+class FtsIndexer(Builder):
+    """
+    Fulltext index builder for databases.
 
-    This is custom builder to generate only SQLite database file
+    A custom builder to generate fulltext indexes, stored in SQL databases.
     """
 
-    name = "sqlite"
+    name = "fts-index"
     allow_parallel = True
 
     def get_target_uri(self, docname: str, typ: str = None) -> str:  # noqa: D102
@@ -23,7 +24,11 @@ class SqliteBuilder(Builder):
         return "db.sqlite"
 
     def prepare_writing(self, docnames: Set[str]) -> None:  # noqa: D102
-        pass
+        from atsphinx.sqlite3fts.models import Content, Document, Section
+
+        Document.truncate_table(cascade=True)
+        Section.truncate_table(cascade=True)
+        Content.truncate_table(cascade=True)
 
     def write_doc(self, docname: str, doctree: nodes.document) -> None:
         """Register content of document into database.

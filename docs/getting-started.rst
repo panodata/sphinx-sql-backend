@@ -47,8 +47,11 @@ You can build database by ``sqlite`` builder.
 
 .. code-block:: console
 
-   make sqlite
-   sqlite3 _build/sqlite/db.sqlite
+   make fts-index
+
+.. code-block:: console
+
+   psql postgresql://postgres@localhost:5432/ --command 'SELECT * FROM document;'
 
 .. code-block:: sqlite3
 

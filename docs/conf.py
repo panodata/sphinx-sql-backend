@@ -32,6 +32,7 @@ intersphinx_mapping = {
 }
 # atsphinx-sqlite3fts
 sqlite3fts_use_search_html = True
+sqlite3fts_database_url = "postgresql://postgres@localhost:5432"
 
 
 def setup(app):  # noqa: D103

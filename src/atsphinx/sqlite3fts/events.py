@@ -33,12 +33,23 @@ def setup_search_html(app: Sphinx, config: Config):
     app.connect("html-collect-pages", _generate_search_html)
 
 
-def configure_database(app: Sphinx):
-    """Connect database for project output."""
+def configure_database(app: Sphinx, config: Config):
+    """
+    Connect database for project output.
+
+    TODO: Add support for multiple database backends?
+    """
+    # SQLite
+    """
     db_path = Path(app.outdir) / "db.sqlite"
     if db_path.exists():
         db_path.unlink()
-    models.initialize(db_path)
+    models.initialize("sqlite", db_path)
+    """
+    # PostgreSQL
+    if not app.config.sqlite3fts_database_url:
+        raise ValueError("Configuring database failed")
+    models.initialize("postgresql", app.config.sqlite3fts_database_url)
 
 
 def register_document(
